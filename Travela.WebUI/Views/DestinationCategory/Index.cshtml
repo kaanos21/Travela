@@ -1,0 +1,40 @@
+﻿@model List<Travela.WebUI.Dtos.ResultDestinationByCategoryDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Destination ID</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Image URL</th>
+            <th>Count Day</th>
+            <th>Sub Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Category ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var destination in Model)
+        {
+            <tr>
+                <td>@destination.DestinationId</td>
+                <td>@destination.City</td>
+                <td>@destination.Country</td>
+                <td>@destination.ImageUrl</td>
+                <td>@destination.CountDay</td>
+                <td>@destination.SubTitle</td>
+                <td>@destination.Description</td>
+                <td>@destination.Price.ToString("C")</td>
+                <td>@destination.Date.ToShortDateString()</td>
+                <td>@destination.CategoryId</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

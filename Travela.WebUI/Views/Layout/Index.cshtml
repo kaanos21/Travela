@@ -1,0 +1,104 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadComponentResult")
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+
+        @await Component.InvokeAsync("_NavbarComponentResult")
+
+            <!-- Carousel Start -->
+            
+            <!-- Carousel End -->
+        </div>
+        <div class="container-fluid search-bar position-relative" style="top: -50%; transform: translateY(-50%);">
+            <div class="container">
+                <div class="position-relative rounded-pill w-100 mx-auto p-5" style="background: rgba(19, 53, 123, 0.8);">
+                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
+                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute me-2" style="top: 50%; right: 46px; transform: translateY(-50%);">Search</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- About Start -->
+        
+        <!-- About End -->
+
+        <!-- Services Start -->
+        
+        <!-- Services End -->
+
+        <!-- Destination Start -->
+        
+        <!-- Destination End -->
+
+        <!-- Explore Tour Start -->
+
+
+        @RenderBody();
+        <!-- Explore Tour Start -->
+
+        <!-- Packages Start -->
+        
+        <!-- Packages End -->
+
+        <!-- Gallery Start -->
+        
+        <!-- Gallery End -->
+
+        <!-- Tour Booking Start -->
+        
+        <!-- Tour Booking End -->
+
+        <!-- Travel Guide Start -->
+       
+        <!-- Travel Guide End -->
+
+        <!-- Blog Start -->
+        
+        <!-- Blog End -->
+
+        <!-- Testimonial Start -->
+        
+        <!-- Testimonial End -->
+
+        <!-- Subscribe Start -->
+        
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+       
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+       
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+    @await Component.InvokeAsync("_ScriptComponentResult")
+    </body>
+
+</html>
