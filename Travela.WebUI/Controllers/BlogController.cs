@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Travela.WebUI.Dtos;
+using Travela.WebUI.Dtos.Admin.AdminBlog;
 
 namespace Travela.WebUI.Controllers
 {
@@ -21,7 +22,7 @@ namespace Travela.WebUI.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultDestinationDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultAdminBlogDto>>(jsonData);
                 return View(values);
             }
             return View();

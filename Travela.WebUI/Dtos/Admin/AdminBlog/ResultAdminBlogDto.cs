@@ -1,10 +1,8 @@
-﻿
+﻿using Travela.EntityLayer.Concrete;
 
-using Travela.EntityLayer.Concrete;
-
-namespace Travela.WebUI.Dtos
+namespace Travela.WebUI.Dtos.Admin.AdminBlog
 {
-    public class ResultDestinationByCategoryDto
+    public class ResultAdminBlogDto
     {
         public int DestinationId { get; set; }
         public string City { get; set; }
@@ -17,8 +15,7 @@ namespace Travela.WebUI.Dtos
         public DateTime Date { get; set; }
         public int CategoryId { get; set; }
 
-        // Navigation Property
-        
-        public ResultCategoryDto Category { get; set; }
+
+        public Category Category { get; set; }
     }
 }

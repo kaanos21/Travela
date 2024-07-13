@@ -1,0 +1,73 @@
+﻿@model Travela.WebUI.Dtos.Admin.AdminCategory.UpdateAdminCategoryDto
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Update</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+        }
+
+        .sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background-color: #343a40; /* Daha belirgin bir renk */
+            color: #ffffff;
+            padding: 15px;
+        }
+
+            .sidebar a {
+                color: #ffffff;
+            }
+
+                .sidebar a:hover {
+                    color: #ffc107; /* Hover efekti için renk */
+                }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul class="list-unstyled">
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Kategori</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Blog Güncelle</h1>
+        <form asp-action="UpdateCategory" method="post">
+            <div class="form-group">
+                <label asp-for="CategoryId"></label>
+                <input asp-for="CategoryId" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryName"></label>
+                <input asp-for="CategoryName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Güncelle</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

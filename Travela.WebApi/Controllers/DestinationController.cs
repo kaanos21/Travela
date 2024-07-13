@@ -25,6 +25,7 @@ namespace Travela.WebApi.Controllers
         [HttpPost]
         public IActionResult CreatedDestination(Destination destination)
         {
+            
             _destinationService.TInsert(destination);
             return Ok("Rota Başarıyla Eklendi");
         }

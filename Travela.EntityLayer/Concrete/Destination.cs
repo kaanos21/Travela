@@ -21,7 +21,8 @@ namespace Travela.EntityLayer.Concrete
         public int CategoryId { get; set; }
 
         // Navigation Property
+
         [JsonIgnore]
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
     }
 }

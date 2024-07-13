@@ -1,0 +1,100 @@
+﻿@model List<Travela.WebUI.Dtos.Admin.AdminBlog.ResultAdminBlogDto>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sidebar Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+        }
+
+        .sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background-color: #343a40; /* Daha belirgin bir renk */
+            color: #ffffff;
+            padding: 15px;
+        }
+
+            .sidebar a {
+                color: #ffffff;
+            }
+
+                .sidebar a:hover {
+                    color: #ffc107; /* Hover efekti için renk */
+                }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2></h2>
+        <ul class="list-unstyled">
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Kategori</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1 id="blog">Blog</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Destination Id</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Image Url</th>
+                    <th>Count Day</th>
+                    <th>Sub Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Category Id</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Örnek veri -->
+                @foreach(var item in Model)
+                {
+                   <tr>
+                    <td>@item.DestinationId</td>
+                    <td>@item.City</td>
+                    <td>@item.Country</td>
+                    <td>@item.ImageUrl</td>
+                    <td>@item.CountDay</td>
+                    <td>@item.SubTitle</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@item.Date</td>
+                    <td>@item.CategoryId</td>
+                        <td><a href="/AdminBlog/DeleteBlog/@item.DestinationId" class="btn btn-danger">Sil</a></td>
+                        <td><a href="/AdminBlog/UpdateBlog/@item.DestinationId" class="btn btn-info">Güncelle</a></td>
+                </tr> 
+                }
+                
+                <!-- Daha fazla veri burada listelenebilir -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    @* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> *@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

@@ -13,6 +13,6 @@ namespace Travela.EntityLayer.Concrete
         public string CategoryName { get; set; }
         public string ImageUrl { get; set; }
         [JsonIgnore]
-        public List<Destination> Destinations { get; set; }
+        public List<Destination>? Destinations { get; set; }
     }
 }

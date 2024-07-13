@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Text;
 using System.Text.Json.Serialization;
 using Travela.WebUI.Dtos;
+using Travela.WebUI.Dtos.Admin.AdminBlog;
 
 namespace Travela.WebUI.Controllers
 {
@@ -34,7 +35,7 @@ namespace Travela.WebUI.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        public async Task<IActionResult> CreateBlog(CreateCategoryDto createCategoryDto)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createCategoryDto);
