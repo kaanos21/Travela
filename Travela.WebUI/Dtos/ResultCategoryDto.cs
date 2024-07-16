@@ -8,6 +8,6 @@ namespace Travela.WebUI.Dtos
         public string CategoryName { get; set; }
         public string ImageUrl { get; set; }
 
-        public List<Destination> Destinations { get; set; }
+        //public List<Destination> Destinations { get; set; }
     }
 }

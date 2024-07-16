@@ -1,4 +1,4 @@
-﻿@model List<Travela.WebUI.Dtos.Admin.AdminBlog.ResultAdminBlogDto>
+﻿@model List<Travela.WebUI.Dtos.Destination.ResultDestinationCategoryFinal>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Layout/Index.cshtml";
@@ -34,8 +34,8 @@
                         </div>
                         <div class="blog-content border border-top-0 rounded-bottom p-4">
                             <p class="mb-3">Posted By: Royal Hamblin </p>
-                            <a href="#" class="h4">@item.CategoryId</a>
-                            @item.Category.CategoryName
+                            <a href="#" class="h4">@item.DestinationId</a>
+                            @item.CategoryName
                             <p class="my-3">@item.Description</p>
                             <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Detaylar</a>
                         </div>
